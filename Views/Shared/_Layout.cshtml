@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title YinYangWorkShop</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapse_target">
+
+            <a class="navbar-brand text-white justify-content-center" href="~/Home/Index">
+                <img width="25" height="25" src="~/Content/Picture/Logo1.png" />
+                <span class="navbar-text">Home</span>
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target">Service</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown_target">
+                        <a class="dropdown-item" href="~/Home/Index">Chứng minh tài chính</a>
+                        <a class="dropdown-item" href="~/Home/SoTietKiemLui">Mở sổ tiết kiệm lùi</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    @RenderBody()
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
